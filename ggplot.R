@@ -1,0 +1,12 @@
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(aes(shape = Species), size = 3)
+d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
+ggplot(d2, aes(clarity, fill = cut)) + geom_bar(position = "dodge")
+head(d2)
+help(dodge)
+ggplot(faithful, aes(waiting)) + geom_density()
+ggplot(faithful, aes(waiting)) + geom_density(fill = "blue", alpha = 0.1)
+ggplot(faithful, aes(waiting)) + geom_line(stat = "density")
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species))
++ geom_point(aes(shape = Species), size = 3) + geom_smooth(method = "lm")
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(aes(shape = Species), size = 3) + geom_smooth(method = "lm") 
++ facet_grid(. ˜ Species)
